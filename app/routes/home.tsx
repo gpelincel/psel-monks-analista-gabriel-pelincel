@@ -3,6 +3,7 @@ import type { Route } from "./+types/home";
 import Hero from "~/components/Hero/Hero";
 import Gallery from "~/components/Gallery/Gallery";
 import CTA from "~/components/CTA/CTA";
+import Categories from "~/components/Categories/Categories";
 
 export function meta({}: Route.MetaArgs) {
 	return [
@@ -19,6 +20,7 @@ export default function Home() {
 				<Products></Products>
 				<Gallery></Gallery>
 				<CTA></CTA>
+				<Categories></Categories>
 			</main>
 		</>
 	);

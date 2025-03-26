@@ -29,11 +29,12 @@
   --color-primary: #2D2D2D;
   --color-secondary: #EAE8E4;
   --color-tertiary: #3C0C60;
+  --color-fourth: #7D26C9;
 }
 
 html,
 body {
-  background: #EAE8E4;
+  background: var(--color-secondary);
 }
 
 main{
