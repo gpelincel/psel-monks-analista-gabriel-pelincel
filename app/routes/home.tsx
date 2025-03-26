@@ -2,6 +2,7 @@ import Products from "~/components/Products/Products";
 import type { Route } from "./+types/home";
 import Hero from "~/components/Hero/Hero";
 import Gallery from "~/components/Gallery/Gallery";
+import CTA from "~/components/CTA/CTA";
 
 export function meta({}: Route.MetaArgs) {
 	return [
@@ -17,6 +18,7 @@ export default function Home() {
 			<main>
 				<Products></Products>
 				<Gallery></Gallery>
+				<CTA></CTA>
 			</main>
 		</>
 	);

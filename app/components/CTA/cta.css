@@ -1,0 +1,21 @@
+.cta{
+    padding-top: 32px;
+    padding-bottom: 64px;
+}
+
+.cta-content{
+    display: grid;
+    grid-template-columns: 1fr 0.25fr;
+    gap: 40px;
+    border-radius: 24px;
+    color: #FFF;
+    background: var(--color-tertiary);
+    padding: 40px;
+}
+
+.cta-content .app-btns{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 8px;
+}

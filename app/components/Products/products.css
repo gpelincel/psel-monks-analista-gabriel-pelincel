@@ -12,10 +12,6 @@
 	font-weight: bold;
 }
 
-.products-container p {
-	font-size: 24px;
-}
-
 .card-list {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -47,4 +43,8 @@
 .card h3 {
 	font-size: 24px;
 	font-weight: bold;
+}
+
+.card p {
+    font-size: 20px;
 }
