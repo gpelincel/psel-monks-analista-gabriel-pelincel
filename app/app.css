@@ -1,15 +1,40 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./assets/fonts/HelveticaNeueLTStd-Th.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./assets/fonts/HelveticaNeueLTStd-Bd.otf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./assets/fonts/HelveticaNeueLTStd-Md.otf");
+  font-weight: bold;
+}
+
+*{
+  font-family: "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+  --color-primary: #2D2D2D;
+  --color-secondary: #EAE8E4;
+  --color-tertiary: #3C0C60;
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  background: #EAE8E4;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+main{
+  padding: 80px;
 }

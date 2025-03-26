@@ -1,0 +1,45 @@
+.products-container {
+	color: var(--color-primary);
+	margin-bottom: 40px;
+}
+.products-container h2 {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.products-container p {
+	font-size: 24px;
+}
+
+.card-list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 24px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 6px;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0px 2px 24px 0px #0000001a;
+}
+
+.card img {
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+	padding: 0 8px;
+}
+
+.card h3 {
+	font-size: 24px;
+	font-weight: bold;
+}
