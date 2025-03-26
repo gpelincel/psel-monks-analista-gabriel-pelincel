@@ -1,3 +1,8 @@
+.products{
+	padding-top: 64px;
+	padding-bottom: 32px;
+}
+
 .products-container {
 	color: var(--color-primary);
 	margin-bottom: 40px;

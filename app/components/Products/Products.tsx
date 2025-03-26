@@ -3,7 +3,7 @@ import "./products.css";
 
 export default function Products() {
 	return (
-		<>
+		<div className="products">
 			<div className="products-container">
 				<h2>Lorem ipsum dolor sit amet consectetur</h2>
 				<p>
@@ -17,6 +17,6 @@ export default function Products() {
                 <Card></Card>
                 <Card></Card>
             </div>
-		</>
+		</div>
 	);
 }

@@ -1,6 +1,7 @@
 import Products from "~/components/Products/Products";
 import type { Route } from "./+types/home";
 import Hero from "~/components/Hero/Hero";
+import Gallery from "~/components/Gallery/Gallery";
 
 export function meta({}: Route.MetaArgs) {
 	return [
@@ -15,6 +16,7 @@ export default function Home() {
 			<Hero></Hero>
 			<main>
 				<Products></Products>
+				<Gallery></Gallery>
 			</main>
 		</>
 	);
