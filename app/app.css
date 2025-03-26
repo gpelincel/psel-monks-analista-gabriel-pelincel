@@ -22,7 +22,6 @@
   font-family: "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.2);
 }
 
 :root{
@@ -44,6 +43,11 @@ main{
 h2{
   font-size: 40px;
   font-weight: bold;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: bold;
 }
 
 p{

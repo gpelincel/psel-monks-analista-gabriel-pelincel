@@ -29,6 +29,7 @@
 }
 
 .card img {
+	height: 250px;
 	object-fit: cover;
 	border-radius: 8px;
 }
@@ -38,11 +39,6 @@
     flex-direction: column;
     gap: 8px;
 	padding: 0 8px;
-}
-
-.card h3 {
-	font-size: 24px;
-	font-weight: bold;
 }
 
 .card p {
