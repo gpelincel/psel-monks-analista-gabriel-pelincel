@@ -19,15 +19,19 @@ export default function Form() {
 			</div>
 			<div className="verify">
 				<p>Verificação de Segurança</p>
-				<div className="verify-sum">
-					<p className="number">427</p>
-					<p>+</p>
-					<p className="number">628</p>
+				<div className="container-sum">
+					<div className="verify-sum">
+						<p className="number">427</p>
+						<p>+</p>
+						<p className="number">628</p>
+					</div>
+					<p>=</p>
 				</div>
-				<p>=</p>
-				<input type="text" placeholder="Resultado*" />
+				<div>
+					<input type="text" placeholder="Resultado*" />
+				</div>
 			</div>
-            <button disabled={true}>Lorem ipsum</button>
+			<button disabled={true}>Lorem ipsum</button>
 		</form>
 	);
 }

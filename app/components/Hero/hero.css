@@ -25,7 +25,7 @@
 }
 
 .hero-content {
-	padding-top: 50px;
+	padding: 24px 0;
 	padding-left: 80px;
 	display: flex;
 	flex-direction: column;
@@ -40,4 +40,40 @@
 .hero-content h1 {
 	font-weight: 900;
 	font-size: 48px;
+}
+
+@media screen and (max-width: 768px) {
+	.desktop-navigation ul{
+		display: none;
+	}
+
+	.hero{
+		position: relative;
+	}
+
+	.hero-content h1 {
+		font-weight: 900;
+		font-size: 24px;
+	}
+
+	.desktop-navigation {
+		padding-top: 16px;
+		padding-left: 24px;
+	}
+
+	.hero-content {
+		padding-top: 48px 0;
+		padding-left: 24px;
+	}
+
+	.svg-container{
+		overflow: hidden;
+		margin-left: -7em;
+		height: 100%;
+	}
+
+	svg{
+		overflow: hidden;
+		height: 100%;
+	}
 }

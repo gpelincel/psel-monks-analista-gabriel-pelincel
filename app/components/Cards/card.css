@@ -30,3 +30,9 @@
     font-size: 16px;
     width: fit-content;
 }
+
+@media screen and (max-width: 768px) {
+	.cards{
+		grid-template-columns: 1fr;
+	}
+}

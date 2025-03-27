@@ -1,122 +1,182 @@
-footer{
-    background: var(--color-primary);
-    color: #fff;
-    padding: 0 80px;
+footer {
+	background: var(--color-primary);
+	color: #fff;
+	padding: 0 80px;
 }
 
-.form-footer{
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    gap: 40px;
-    justify-items: center;
-    align-items: center;
-    padding: 64px 0;
+.form-footer {
+	display: grid;
+	grid-template-columns: 0.5fr 1fr;
+	gap: 40px;
+	justify-items: center;
+	align-items: center;
+	padding: 64px 0;
 }
 
-.bottom-footer{
+.bottom-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: 40px;
+	padding: 40px 0;
+}
+
+.text-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	font-size: 20px;
+}
+
+.text-footer p {
+	font-weight: bold;
+}
+
+.links-footer {
+	display: flex;
+    flex-wrap: wrap;
+	gap: 40px;
+}
+
+.social-media {
+	display: flex;
+	gap: 40px;
+}
+
+.social-media i {
+	font-size: 32px;
+}
+
+.form-container form {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	padding: 24px;
+	color: var(--color-primary);
+	background: var(--color-secondary);
+	border-radius: 24px;
+}
+
+form h2 {
+	font-size: 40px;
+}
+
+form p {
+	font-size: 20px;
+}
+
+form small {
+	font-size: 16px;
+}
+
+.form-text {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+form .input-group {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 18px;
+}
+
+form input {
+	border-radius: 8px;
+	padding: 6px 10px;
+	background: #fff;
+	font-weight: normal;
+    font-size: 20px;
+}
+
+form .verify {
+	display: flex;
+    flex-wrap: wrap;
+	align-items: center;
+	gap: 32px;
+	font-weight: bold;
+}
+
+.verify-sum {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	background: #dfdcd5;
+	padding: 8px 24px;
+	border-radius: 8px;
+    font-size: 20;
+}
+
+.verify-sum .number {
+	color: #7d26c9;
+}
+
+.container-sum{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    gap: 40px;
-    padding: 40px 0;
-}
-
-.text-footer{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    font-size: 20px;
-}
-
-.text-footer p{
-    font-weight: bold;
-}
-
-.links-footer{
-    display: flex;
-    gap: 40px;
-}
-
-.social-media{
-    display: flex;
-    gap: 40px;
-}
-
-.social-media i{
-    font-size: 32px;
-}
-
-.form-container form{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding: 24px;
-    color: var(--color-primary);
-    background: var(--color-secondary);
-    border-radius: 24px;
-}
-
-form h2{
-    font-size: 40px;
-}
-
-form p{
-    font-size: 20px;
-}
-
-form small{
-    font-size: 16px;
-}
-
-.form-text{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-
-
-form .input-group{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-}
-
-form input{
-    border-radius: 8px;
-    padding: 6px 10px;
-    background: #fff;
-    font-weight: normal;
-}
-
-form .verify{
-    display: flex;
-    align-items: center;
     gap: 32px;
-    font-weight: bold;
 }
 
-.verify-sum{
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    background: #DFDCD5;
-    padding: 8px 24px;
-    border-radius: 8px;
+form button {
+	align-self: center;
+	background: #dfbbfe;
+	border-radius: 4px;
+	padding: 8px 40px;
+	font-weight: bold;
+	font-size: 16px;
+	width: fit-content;
 }
 
-.verify-sum .number{
-    color: #7D26C9;
-}
+@media screen and (max-width: 767px) {
+	.form-footer {
+		grid-template-columns: 1fr;
+	}
+	form .input-group {
+		grid-template-columns: 1fr;
+	}
 
-form button{
-    align-self: center;
-    background: #DFBBFE;
-    border-radius: 4px;
-    padding: 8px 40px;
-    font-weight: bold;
-    font-size: 16px;
-    width: fit-content;
+    footer{
+        padding: 0 24px;
+    }
+
+    .links-footer{
+        gap: 16px;
+    }
+
+    .verify{
+        align-items: flex-start !important;
+        gap: 16px;
+    }
+
+    .verify input{
+        width: 100%;
+    }
+
+    form h2 {
+        font-size: 24px;
+    }
+    
+    form p {
+        font-size: 16px;
+    }
+
+    .container-sum{
+        gap: 16px;
+    }
+
+    .verify-sum {
+        gap: 8px;
+        padding: 0 8px;
+    }
+
+    .verify-sum .number{
+        font-size: 16px;
+    }
+
+    .verify p{
+        font-size: 20px;
+    }
 }

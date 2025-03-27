@@ -47,7 +47,7 @@ export default function Hero() {
 					</svg>
 				</div>
 			</div>
-			<div>
+			<div className="svg-container">
 				<MultiLogosSVG></MultiLogosSVG>
 			</div>
 		</section>

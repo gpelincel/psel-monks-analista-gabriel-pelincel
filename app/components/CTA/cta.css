@@ -23,3 +23,9 @@
 .app-btns img{
     border-radius: 8px;
 }
+
+@media screen and (max-width: 768px) {
+	.cta-content{
+		grid-template-columns: 1fr;
+	}
+}
