@@ -1,9 +1,10 @@
 import "./categories.css";
 
-export default function Badge(categoria:any){
+export default function Badge(props:any){
+    let nome = props.categoria.name;
     return (
         <div className="category-badge">
-            <p>{categoria.categoria}</p>
+            <p>{nome}</p>
         </div>
     );
 }
