@@ -11,6 +11,11 @@
 	font-size: 20px;
 }
 
+.desktop-navigation ul li:hover{
+	list-style: disc;
+	font-weight: bold;
+}
+
 .hero {
 	display: grid;
 	grid-template-columns: 1fr 0.5fr;
