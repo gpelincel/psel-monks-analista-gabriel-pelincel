@@ -5,7 +5,6 @@ import Gallery from "~/components/Gallery/Gallery";
 import CTA from "~/components/CTA/CTA";
 import Categories from "~/components/Categories/Categories";
 import Cards from "~/components/Cards/Cards";
-import Footer from "~/components/Footer/Footer";
 
 export function meta({}: Route.MetaArgs) {
 	return [
@@ -25,7 +24,6 @@ export default function Home() {
 				<Categories></Categories>
 				<Cards></Cards>
 			</main>
-			<Footer></Footer>
 		</>
 	);
 }
