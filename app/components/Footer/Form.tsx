@@ -27,6 +27,7 @@ export default function Form() {
 				<p>=</p>
 				<input type="text" placeholder="Resultado*" />
 			</div>
+            <button disabled={true}>Lorem ipsum</button>
 		</form>
 	);
 }
