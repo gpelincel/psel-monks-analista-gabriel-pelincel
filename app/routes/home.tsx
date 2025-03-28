@@ -6,6 +6,8 @@ import CTA from "~/components/CTA/CTA";
 import Categories from "~/components/Categories/Categories";
 import Cards from "~/components/Cards/Cards";
 import Footer from "~/components/Footer/Footer";
+import NavigationMobile from "~/components/Navigation/NavigationMobile";
+import Navigation from "~/components/Navigation/Navigation";
 
 export function meta({}: Route.MetaArgs) {
 	return [
@@ -16,8 +18,12 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
 	return (
-		<>
-			<Hero></Hero>
+		<div className="wrapp">
+			<header>
+				<NavigationMobile></NavigationMobile>
+				<Navigation></Navigation>
+				<Hero></Hero>
+			</header>
 			<main>
 				<Products></Products>
 				<Gallery></Gallery>
@@ -26,6 +32,6 @@ export default function Home() {
 				<Cards></Cards>
 			</main>
 			<Footer></Footer>
-		</>
+		</div>
 	);
 }

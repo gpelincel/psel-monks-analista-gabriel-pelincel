@@ -1,27 +1,7 @@
-.desktop-navigation {
-	display: flex;
-	gap: 4em;
-	padding-left: 80px;
-	padding-top: 24px;
-}
-
-.desktop-navigation ul {
-	display: flex;
-	gap: 2em;
-	font-size: 20px;
-}
-
-.desktop-navigation ul li:hover{
-	list-style: disc;
-	font-weight: bold;
-}
-
 .hero {
 	display: grid;
 	grid-template-columns: 1fr 0.5fr;
-	background: var(--color-primary);
 	color: var(--color-secondary);
-	border-radius: 0 0 32px 32px;
 }
 
 .hero-content {
@@ -29,36 +9,35 @@
 	padding-left: 80px;
 	display: flex;
 	flex-direction: column;
+	gap: 32px;
 	height: 100%;
 }
 
 .hero-content svg {
-	margin-top: 3em;
+	margin-top: auto;
 	align-self: center;
+}
+
+.svg-desktop{
+	position: relative;
+	z-index: 100;
 }
 
 .hero-content h1 {
 	font-weight: 900;
 	font-size: 48px;
+	margin-top: 60px;
 }
 
 @media screen and (max-width: 768px) {
-	.desktop-navigation ul{
-		display: none;
-	}
-
-	.hero{
+	.hero {
 		position: relative;
+		overflow: hidden;
 	}
 
 	.hero-content h1 {
 		font-weight: 900;
 		font-size: 24px;
-	}
-
-	.desktop-navigation {
-		padding-top: 16px;
-		padding-left: 24px;
 	}
 
 	.hero-content {
@@ -68,12 +47,11 @@
 
 	.svg-container{
 		overflow: hidden;
-		margin-left: -7em;
-		height: 100%;
 	}
 
-	svg{
-		overflow: hidden;
+	.svg-container svg {
+		margin-left: -4em;
 		height: 100%;
+		z-index: 97;
 	}
 }

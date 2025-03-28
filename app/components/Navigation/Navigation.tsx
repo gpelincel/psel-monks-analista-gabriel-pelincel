@@ -1,5 +1,5 @@
 import LogoSVG from "../LogoSVG";
-import "./hero.css";
+import "./navigation.css";
 
 export default function Navigation() {
 	return (

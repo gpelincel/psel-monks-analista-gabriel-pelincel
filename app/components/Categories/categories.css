@@ -27,3 +27,9 @@
     font-size: 20px;
     font-family: 'Inter', sans-serif;
 }
+
+@media screen and (max-width: 767px) {
+    .category-badge p {
+        font-size: 16px;
+    }
+}
