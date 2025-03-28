@@ -9,10 +9,11 @@ export default function Hero() {
 				<Navigation></Navigation>
 				<div className="hero-content">
 					<div>
-						<h1>Lorem ipsum dolor sit amet consectetur</h1>
+						<h1>Transforme Sua Beleza e Bem-Estar</h1>
 						<p>
-							Lorem ipsum dolor sit amet consectetur. Semper orci adipiscing faucibus
-							sit scelerisque quis commodo aenean viverra
+							Explore nossa seleção exclusiva de produtos de alta qualidade para
+							cuidados com a pele, cabelo, maquiagem e muito mais. Encontre o que você
+							precisa para se sentir ainda mais incrível!
 						</p>
 					</div>
 					<svg

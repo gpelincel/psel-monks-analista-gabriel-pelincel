@@ -1,11 +1,12 @@
 import "./card.css";
 
-export default function Card(){
+export default function Card(props:any){
+    let category = props.category;
     return (
         <div className="category-card">
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <p>Lorem ipsum dolor sit amet consectetur. Semper orci adipiscing faucibus sit scelerisque quis commodo aenean viverra.</p>
-            <button>Lorem ipsum</button>
+            <h3>{category.name}</h3>
+            <p>{category.description}</p>
+            <button>Saiba Mais</button>
         </div>
     );
 }

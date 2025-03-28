@@ -8,7 +8,7 @@ export default function Products() {
 
 	useEffect(() => {
 		try {
-			fetchAPI("posts",['per_page=4']).then((products) => {
+			fetchAPI("posts", ["per_page=4", "categories=3"]).then((products) => {
 				setProducts(products);
 			});
 		} catch (error) {
@@ -23,15 +23,14 @@ export default function Products() {
 	return (
 		<div className="products">
 			<div className="products-container">
-				<h2>Lorem ipsum dolor sit amet consectetur</h2>
+				<h2>Produtos de Beleza e Bem-Estar para Você</h2>
 				<p>
-					Lorem ipsum dolor sit amet consectetur. Semper orci adipiscing faucibus sit
-					scelerisque quis commodo
+					Encontre perfumes irresistíveis, maquiagens de alta performance, cuidados
+					para pele e cabelos, além de fragrâncias para deixar sua casa ainda mais
+					aconchegante. Qualidade e sofisticação para seu dia a dia!
 				</p>
 			</div>
-			<div className="card-list">
-				{cardsList}
-			</div>
+			<div className="card-list">{cardsList}</div>
 		</div>
 	);
 }

@@ -22,7 +22,7 @@ export default function Categories() {
 
 	return (
 		<div className="categories">
-			<h2>Lorem ipsum dolor sit amet consectetur</h2>
+			<h2>Nossas Categorias em Destaque</h2>
 			<div className="categories-list">{categoriasList}</div>
 		</div>
 	);

@@ -29,6 +29,7 @@
     font-weight: bold;
     font-size: 16px;
     width: fit-content;
+    margin-top: auto;
 }
 
 @media screen and (max-width: 768px) {

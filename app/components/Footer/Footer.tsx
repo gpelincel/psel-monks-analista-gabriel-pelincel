@@ -383,7 +383,7 @@ export default function Footer() {
 					</li>
 				</ul>
 				<div className="text-footer">
-					<p>Lorem ipsum dolor sit amet</p>
+					<p>© 2025 Monks. Todos os direitos reservados.</p>
 					<ul className="links-footer">
 						<li>
 							<a href="#">Lorem ipsum</a>
