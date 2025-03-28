@@ -9,8 +9,8 @@ import Footer from "~/components/Footer/Footer";
 
 export function meta({}: Route.MetaArgs) {
 	return [
-		{ title: "New React Router App" },
-		{ name: "description", content: "Welcome to React Router!" },
+		{ title: "Monks | Gabriel Pelincel" },
+		{ name: "description", content: "Processo seletivo Monks 2025" },
 	];
 }
 
