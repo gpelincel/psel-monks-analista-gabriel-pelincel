@@ -6,7 +6,7 @@ export default function MultiLogoSVG() {
 			viewBox="0 0 506 480"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg">
-			<g clip-path="url(#clip0_7_292)">
+			<g clipPath="url(#clip0_7_292)">
 				<path
 					fill-rule="evenodd"
 					clip-rule="evenodd"

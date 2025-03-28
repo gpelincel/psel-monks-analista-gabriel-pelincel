@@ -6,7 +6,7 @@ export default function Card(props:any){
         <div className="category-card">
             <h3>{category.name}</h3>
             <p>{category.description}</p>
-            <button>Saiba Mais</button>
+            <a href={category.link}>Saiba Mais</a>
         </div>
     );
 }

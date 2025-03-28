@@ -1,21 +1,73 @@
+import { useState } from "react";
 import "./footer.css";
+import { sendNewsletter } from "~/services/APIService";
+
+interface Profile {
+	nome: string;
+    sobrenome: string;
+    email: string;
+    telefone: string | null;
+}
 
 export default function Form() {
+
+	const [isDisabled, setDisabled] = useState<boolean>(false);
+	const [messageClass, setMessageClass] = useState('success');
+
+	const [formData, setFormData] = useState<Profile>({
+		nome: "",
+        sobrenome: "",
+        email: "",
+        telefone: null,
+	});
+
+	const [message, setMessage] = useState("");
+
+	async function submitForm (e:any) {
+		e.preventDefault();
+		
+		if (!formData.nome || !formData.sobrenome || !formData.email) {
+			setMessageClass("error");
+		
+			let errorMsg = "";
+			if (!formData.nome) errorMsg = "Por favor insira seu nome!";
+			else if (!formData.sobrenome) errorMsg = "Por favor insira seu sobrenome!";
+			else if (!formData.email) errorMsg = "Por favor insira seu e-mail!";
+		
+			setMessage(errorMsg);
+			return;
+		}
+		
+		const response = await sendNewsletter(formData);
+
+		console.log(response);
+
+		if (response.ok) {
+			setDisabled(true);
+			setMessageClass("success");
+			setMessage("Obrigado por se cadastrar! Entraremos em contato em breve.");
+		}
+	}
+
+	async function handleChange(e:any){
+		setFormData({...formData, [e.target.name]: e.target.value });
+	}
+
 	return (
-		<form action="">
+		<form onSubmit={submitForm} action="">
 			<div className="form-text">
-				<h2>Lorem ipsum dolor sit amet consectetur</h2>
+				<h2>Inscreva-se na Nossa Newsletter</h2>
 				<p>
-					Lorem ipsum dolor sit amet consectetur. Semper orci adipiscing faucibus sit
-					scelerisque
+				Receba ofertas exclusivas, novidades e dicas de beleza diretamente no seu e-mail. Fique por dentro de tudo!
 				</p>
-				<small>*Lorem ipsum dolor sit amet consectetur</small>
+				<small>*Campos obrigatórios</small>
+				<small className={messageClass}>{message}</small>
 			</div>
 			<div className="input-group">
-				<input type="text" placeholder="Categoria*" />
-				<input type="text" placeholder="Categoria*" />
-				<input type="text" placeholder="Categoria*" />
-				<input type="text" placeholder="Categoria*" />
+				<input onChange={handleChange} disabled={isDisabled} id="nome" name="nome" type="text" placeholder="Nome*" />
+				<input onChange={handleChange} disabled={isDisabled} id="sobrenome" name="sobrenome" type="text" placeholder="Sobrenome*" />
+				<input onChange={handleChange} disabled={isDisabled} id="email" name="email" type="email" placeholder="E-mail*"/>
+				<input onChange={handleChange} disabled={isDisabled} id="telefone" name="telefone" type="text" placeholder="Telefone"/>
 			</div>
 			<div className="verify">
 				<p>Verificação de Segurança</p>
@@ -28,10 +80,10 @@ export default function Form() {
 					<p>=</p>
 				</div>
 				<div>
-					<input type="text" placeholder="Resultado*" />
+					<input disabled={isDisabled} id="resultado-soma" name="resultado-soma" type="number" min="0" placeholder="Resultado*" />
 				</div>
 			</div>
-			<button disabled={true}>Lorem ipsum</button>
+			<button type="submit" hidden={isDisabled}>Inscrever-se</button>
 		</form>
 	);
 }

@@ -1,10 +1,10 @@
 import "./categories.css";
 
 export default function Badge(props:any){
-    let nome = props.categoria.name;
+    let categoria = props.categoria;
     return (
-        <div className="category-badge">
-            <p>{nome}</p>
-        </div>
+        <a href={categoria.link} className="category-badge">
+            <p>{categoria.name}</p>
+        </a>
     );
 }
