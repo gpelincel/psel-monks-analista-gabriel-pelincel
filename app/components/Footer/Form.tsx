@@ -1,38 +1,56 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./footer.css";
 import { sendNewsletter } from "~/services/APIService";
-
-interface Profile {
-	nome: string;
-    sobrenome: string;
-    email: string;
-    telefone: string | null;
-}
 
 export default function Form() {
 
 	const [isDisabled, setDisabled] = useState<boolean>(false);
 	const [messageClass, setMessageClass] = useState('success');
+	const [verifySum, setVerifySum] = useState<number[]>([]);
 
-	const [formData, setFormData] = useState<Profile>({
+	const generateRandomNumber = () => {
+		return Math.floor(Math.random() * (999 - 1 + 1) + 1);
+	}
+
+	useEffect(()=> {
+		let sum = [
+			generateRandomNumber(),
+			generateRandomNumber(),
+		];
+
+		setVerifySum(sum);
+	}, [])
+
+	const [formData, setFormData] = useState({
 		nome: "",
         sobrenome: "",
         email: "",
         telefone: null,
+		soma: 0
 	});
 
 	const [message, setMessage] = useState("");
 
 	async function submitForm (e:any) {
 		e.preventDefault();
+
+		let sumResult = verifySum[0] + verifySum[1];
+		let verify_sum = Number(formData.soma) !== sumResult;
+
+		console.log(sumResult);
+		console.log(formData.soma);
 		
-		if (!formData.nome || !formData.sobrenome || !formData.email) {
+		if (!formData.nome || !formData.sobrenome || !formData.email || !formData.soma || verify_sum) {
 			setMessageClass("error");
+
+			console.log(formData.soma);
 		
 			let errorMsg = "";
 			if (!formData.nome) errorMsg = "Por favor insira seu nome!";
 			else if (!formData.sobrenome) errorMsg = "Por favor insira seu sobrenome!";
 			else if (!formData.email) errorMsg = "Por favor insira seu e-mail!";
+			else if (!formData.soma) errorMsg = "Por favor insira a soma dos números.";
+			else if (verify_sum) errorMsg = "Por favor insira a soma correta dos números.";
 		
 			setMessage(errorMsg);
 			return;
@@ -50,7 +68,11 @@ export default function Form() {
 	}
 
 	async function handleChange(e:any){
-		setFormData({...formData, [e.target.name]: e.target.value });
+		if (e.target.name !== "resultado-soma") {
+			setFormData({...formData, [e.target.name]: e.target.value });
+		} else {
+			
+		}
 	}
 
 	return (
@@ -73,14 +95,14 @@ export default function Form() {
 				<p>Verificação de Segurança</p>
 				<div className="container-sum">
 					<div className="verify-sum">
-						<p className="number">427</p>
+						<p className="number">{verifySum[0]}</p>
 						<p>+</p>
-						<p className="number">628</p>
+						<p className="number">{verifySum[1]}</p>
 					</div>
 					<p>=</p>
 				</div>
 				<div>
-					<input disabled={isDisabled} id="resultado-soma" name="resultado-soma" type="number" min="0" placeholder="Resultado*" />
+					<input onChange={handleChange} disabled={isDisabled} id="soma" name="soma" type="number" min="0" placeholder="Resultado*" />
 				</div>
 			</div>
 			<button type="submit" hidden={isDisabled}>Inscrever-se</button>
