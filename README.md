@@ -76,7 +76,8 @@ Criar um tema WordPress para servir como backend e fornecer dados dinamicamente 
 
 4. **Custom Post Type & Meta Fields**
    - Copie a pasta _newsletter-plugin-ctp_ para a pasta de plugins do seu Wordpress
-   - Ative o plugin no seu painel
+   - Copie a pasta _jwt-authentication-for-wp-rest-api_ para a pasta de plugins do seu Wordpress
+   - Ative os plugins no seu painel
 
 ## Campos personalizados da API WordPress
 
